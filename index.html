@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <title>Abdulrahman Gallery - MJ Style</title>
+    <style>
+        body { background-color: #111; color: white; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
+        
+        /* Michael Jackson Logo Animation */
+        .mj-logo { width: 100px; height: 100px; background: white; border-radius: 50%; margin: 20px auto; position: relative; overflow: hidden; border: 3px solid gold; animation: blink 3s infinite; }
+        .mj-logo::before, .mj-logo::after { content: ''; position: absolute; width: 30px; height: 5px; background: black; top: 45px; }
+        .mj-logo::before { left: 15px; } .mj-logo::after { right: 15px; }
+        
+        @keyframes blink {
+            0%, 90%, 100% { height: 5px; top: 45px; } /* Kulle idanu */
+            95% { height: 2px; top: 48px; } /* Bude kadan */
+        }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
+        .card { background: #222; padding: 10px; border-radius: 10px; border: 1px solid #444; }
+        .card img { width: 100%; border-radius: 5px; }
+        .btn-download { display: inline-block; margin-top: 10px; padding: 10px 20px; background: gold; color: black; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="mj-logo"></div> <h1>Barka da zuwa Taskar Hotuna ta Abdulrahman</h1>
+    <p>Zaka iya duba hotuna na sannan ka sauke su (Download) kyauta.</p>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="hoto1.jpg" alt="Abdulrahman Photo">
+            <a href="hoto1.jpg" download class="btn-download">Download Hoto</a>
+        </div>
+        
+        <div class="card">
+            <img src="hoto2.jpg" alt="Abdulrahman Photo">
+            <a href="hoto2.jpg" download class="btn-download">Download Hoto</a>
+        </div>
+    </div>
+
+</body>
+  </html>
